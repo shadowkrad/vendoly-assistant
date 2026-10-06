@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vendoly Assistant</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="header">
+    <div class="logo">
+      <span class="logo-icon">⚡</span>
+      <span class="logo-text">Vendoly Assistant</span>
+    </div>
+    <span class="badge">v1.0.0</span>
+  </div>
+
+  <div class="content">
+    <div class="status-card">
+      <div class="status-indicator active"></div>
+      <div class="status-info">
+        <div class="status-title">Bridge Attivo</div>
+        <div class="status-desc">Pronto per il cross-posting su Vinted</div>
+      </div>
+    </div>
+
+    <div class="settings-group">
+      <label class="toggle-label">
+        <span>Modalità Revisione</span>
+        <input type="checkbox" id="reviewModeToggle" checked>
+      </label>
+      <p class="setting-hint">L'estensione compila foto e testi ma ti permette di cliccare "Carica" su Vinted per sicurezza.</p>
+    </div>
+
+    <div class="quick-links">
+      <a href="https://www.vinted.it/items/new" target="_blank" class="btn btn-secondary">Apri Vinted</a>
+      <a href="http://localhost:3000/dashboard/products" target="_blank" class="btn btn-primary">Catalogo Vendoly</a>
+    </div>
+  </div>
+
+  <div class="footer">
+    <span>Taaaac Retail Suite • Vendoly</span>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>

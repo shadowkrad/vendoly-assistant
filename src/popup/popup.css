@@ -1,0 +1,162 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+body {
+  width: 300px;
+  background-color: #0f172a;
+  color: #f8fafc;
+  font-size: 13px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 16px;
+  border-bottom: 1px solid #1e293b;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.logo-icon {
+  font-size: 16px;
+  color: #38bdf8;
+}
+
+.logo-text {
+  font-weight: 700;
+  font-size: 14px;
+  color: #ffffff;
+}
+
+.badge {
+  background: #1e293b;
+  color: #38bdf8;
+  font-size: 10px;
+  font-weight: 700;
+  padding: 2px 6px;
+  border-radius: 6px;
+  border: 1px solid #334155;
+}
+
+.content {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.status-card {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: #1e293b;
+  padding: 12px;
+  border-radius: 12px;
+  border: 1px solid #334155;
+}
+
+.status-indicator {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #94a3b8;
+}
+
+.status-indicator.active {
+  background: #10b981;
+  box-shadow: 0 0 10px #10b981;
+}
+
+.status-title {
+  font-weight: 700;
+  font-size: 12px;
+  color: #ffffff;
+}
+
+.status-desc {
+  font-size: 11px;
+  color: #94a3b8;
+}
+
+.settings-group {
+  background: #1e293b;
+  padding: 12px;
+  border-radius: 12px;
+  border: 1px solid #334155;
+}
+
+.toggle-label {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 600;
+  color: #e2e8f0;
+  cursor: pointer;
+}
+
+.toggle-label input[type="checkbox"] {
+  accent-color: #06b6d4;
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+}
+
+.setting-hint {
+  font-size: 10px;
+  color: #94a3b8;
+  margin-top: 6px;
+  line-height: 1.4;
+}
+
+.quick-links {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+
+.btn {
+  display: block;
+  text-align: center;
+  padding: 8px 10px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 11px;
+  transition: all 0.2s;
+}
+
+.btn-primary {
+  background: #059669;
+  color: white;
+}
+
+.btn-primary:hover {
+  background: #047857;
+}
+
+.btn-secondary {
+  background: #334155;
+  color: #cbd5e1;
+}
+
+.btn-secondary:hover {
+  background: #475569;
+}
+
+.footer {
+  padding: 10px 16px;
+  background: #090d16;
+  text-align: center;
+  font-size: 10px;
+  color: #64748b;
+  border-top: 1px solid #1e293b;
+}
