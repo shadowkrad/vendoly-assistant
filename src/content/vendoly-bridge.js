@@ -8,15 +8,23 @@
 
   // Segnala all'applicazione web che l'estensione è attiva
   function broadcastReady() {
-    window.postMessage({ type: 'VENDOLY_ASSISTANT_AVAILABLE', version: '1.0.0' }, '*');
+    window.postMessage({ type: 'VENDOLY_ASSISTANT_AVAILABLE', version: '1.0.3' }, '*');
     document.documentElement.setAttribute('data-vendoly-assistant', 'installed');
+    document.documentElement.setAttribute('data-vendoly-assistant-version', '1.0.3');
   }
 
   broadcastReady();
 
   // Ascolta messaggi da Vendoly (es. clic sul pulsante "⚡ Invia a Vinted")
   window.addEventListener('message', (event) => {
-    if (!event.data || event.data.source !== 'vendoly-web') return;
+    if (!event.data) return;
+
+    if (event.data.type === 'PING_VENDOLY_ASSISTANT') {
+      broadcastReady();
+      return;
+    }
+
+    if (event.data.source !== 'vendoly-web') return;
 
     if (event.data.type === 'START_VINTED_CROSSPOST') {
       const payload = event.data.payload;

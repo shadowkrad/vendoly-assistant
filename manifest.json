@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "Vendoly Assistant",
-  "version": "1.0.0",
+  "version": "1.0.3",
   "description": "Assistente di pubblicazione e cross-listing automatico per Vendoly su Vinted e marketplace second-hand.",
   "icons": {
     "16": "icons/icon16.png",
@@ -30,6 +30,8 @@
     "*://localhost/*",
     "*://127.0.0.1/*",
     "*://*.vendoly.it/*",
+    "*://*.taaaac.eu/*",
+    "*://*.vercel.app/*",
     "*://*.vinted.it/*",
     "*://*.vinted.fr/*",
     "*://*.vinted.es/*",
@@ -41,7 +43,9 @@
       "matches": [
         "*://localhost/*",
         "*://127.0.0.1/*",
-        "*://*.vendoly.it/*"
+        "*://*.vendoly.it/*",
+        "*://*.taaaac.eu/*",
+        "*://*.vercel.app/*"
       ],
       "js": ["src/content/vendoly-bridge.js"],
       "run_at": "document_end"
